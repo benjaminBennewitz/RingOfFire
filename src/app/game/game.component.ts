@@ -13,6 +13,7 @@ import { Game } from '../../models/game';
 export class GameComponent {
   game:Game;
   pickCardAniamtion: boolean = false;
+  currentCard:string | undefined = '';
 
   constructor(){
     this.game = new Game();
@@ -20,7 +21,15 @@ export class GameComponent {
   }
 
   takeCard(){
-    this.pickCardAniamtion = true;
+    if(!this.pickCardAniamtion){
+      this.currentCard = this.game.stack.pop();
+      this.pickCardAniamtion = true;
+      console.log(this.currentCard);
+
+      setTimeout (() => {
+        this.pickCardAniamtion = false;
+      }, 1500);
+    }
   }
 
   newGame(){

@@ -25,6 +25,7 @@
 
     >img {
         width: 40vw;
+        max-width: 500px;
         height: auto;
         transition: all 150ms;
         &:hover{
