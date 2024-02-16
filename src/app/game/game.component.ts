@@ -16,6 +16,7 @@ export class GameComponent {
 
   constructor(){
     this.game = new Game();
+    this.newGame();
   }
 
   takeCard(){
