@@ -22,13 +22,22 @@ export class GameComponent {
 
   takeCard(){
     if(!this.pickCardAniamtion){
-      this.currentCard = this.game.stack.pop();
       this.pickCardAniamtion = true;
-      console.log(this.currentCard);
+      this.currentCard = this.game.stack.pop();
 
       setTimeout (() => {
+        this.checkType();
         this.pickCardAniamtion = false;
-      }, 1500);
+      }, 1200);
+      
+      console.log(this.currentCard);
+      console.log(this.game);
+    }
+  }
+
+  checkType(){
+    if(this.currentCard != undefined){
+      this.game.playedCards.push(this.currentCard);
     }
   }
 
