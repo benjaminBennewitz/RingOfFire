@@ -8,6 +8,12 @@ import { Component } from '@angular/core';
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })
+
 export class GameComponent {
 
+  pickCardAniamtion = false;
+
+  takeCard(){
+    this.pickCardAniamtion = true;
+  }
 }

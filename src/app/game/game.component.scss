@@ -16,5 +16,20 @@
     > img {
         position: absolute;
         width: 120px;
+        -webkit-filter: drop-shadow(5px 5px 8px rgba(0,0,0,0.5));
+        filter: drop-shadow(5px 5px 8px rgba(0,0,0,0.5));
     }
+}
+
+.top-card{
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    &:hover {
+        transform: scale(1.2) translateY(-25px);
+    }
+}
+
+.pick-card{
+    transition: all 150ms ease-in-out;
+    transform: scale(1.5) !important;
 }
