@@ -11,16 +11,18 @@ import { Game } from '../../models/game';
 })
 
 export class GameComponent {
+  game:Game;
+  pickCardAniamtion: boolean = false;
 
-  pickCardAniamtion = false;
-  game!: Game;
+  constructor(){
+    this.game = new Game();
+  }
 
   takeCard(){
     this.pickCardAniamtion = true;
   }
 
   newGame(){
-    this.game = new Game();
     console.log(this.game);
   }
 }
