@@ -1,4 +1,8 @@
-<app-player *ngFor="let player of game.players; let i = index" [ngStyle]="{'bottom.px':100 + (i * 80)}" class="player-position" [name]="player"></app-player>
+<app-player *ngFor="let player of game.players; let i = index" 
+    [ngStyle]="{'bottom.px':100 + (i * 80)}" class="player-position" 
+    [name]="player"
+    [playerActive]="i == game.currentPlayer">
+</app-player>
 
 <div class="field">
     <div class="card-stack">
@@ -11,6 +15,8 @@
         <img (click)="takeCard()" *ngIf="pickCardAniamtion" class="pick-card" style="left:32px;top:25px" src="/assets/cards/{{ currentCard }}.png"/>
     </div>
 </div>
+
+<app-game-info></app-game-info>
 
 <button mat-fab color="primary" class="btn-add" (click)="openDialog()">
     <mat-icon>add</mat-icon>

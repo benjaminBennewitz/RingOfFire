@@ -1,0 +1,23 @@
+div{
+    
+    position: absolute;
+    bottom:16px;
+    left:32px;
+    right:150px;
+
+    min-height: 50px;
+    max-height: 150px;
+    display: flex;
+    justify-content: center;
+
+    background-color: white;
+
+    > mat-card{
+        > mat-card-title{
+            margin: 16px 0 16px 16px;
+        }
+        > mat-card-content{
+            overflow-y: auto;
+        }
+    }
+}
